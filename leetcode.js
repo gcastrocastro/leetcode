@@ -23,5 +23,23 @@ Explanation: There are no characters in letters that is lexicographically greate
 
 
 const nextGreatestLetter = function(letters, target) {
-    
+    const targetFound = letters.findIndex(i => i === target)
+    if (targetFound >= 0){
+        return letters[targetFound + 1];  
+    } else {
+        return letters[0];
+    }
 }
+
+//option 2 using a set
+const nextGreatestLetter1 = function(letters, target){
+    let set = new Set(letters);
+    for (let i of set){
+        if (target < i)
+            return console.log(i);
+    } return console.log(letters[0]);
+}
+
+nextGreatestLetter1(["c","f","j"], "c");
+nextGreatestLetter1(["c","f","j"], "c");
+nextGreatestLetter1(["x","x","y","y"], "z");
