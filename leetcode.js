@@ -40,6 +40,6 @@ const nextGreatestLetter1 = function(letters, target){
     } return console.log(letters[0]);
 }
 
-nextGreatestLetter1(["c","f","j"], "c");
-nextGreatestLetter1(["c","f","j"], "c");
-nextGreatestLetter1(["x","x","y","y"], "z");
+// nextGreatestLetter1(["c","f","j"], "c");
+// nextGreatestLetter1(["c","f","j"], "c");
+// nextGreatestLetter1(["x","x","y","y"], "z");
