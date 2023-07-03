@@ -77,7 +77,15 @@ The total cost is 6.*/
 // output: minimum cost needed to reach top
 
 const minCostClimbingStairs = function(cost){
+    let startingPointOne = cost[0];
+    let startingPointTwo = cost[1];
 
+    for (let i = 2; i < cost.length ; i++){
+        let currentCost = cost[i] + Math.min(startingPointOne, startingPointTwo);
+        startingPointOne = startingPointTwo;
+        startingPointTwo = currentCost;
+    }
+    return console.log(Math.min(startingPointOne, startingPointTwo));
 }
 
 minCostClimbingStairs([10,15,20]);
