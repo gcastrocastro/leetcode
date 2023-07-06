@@ -265,46 +265,58 @@ replaceDigits("a1b2c3d4e");
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
-/* 1844. Replace All Digits with Characters */
+/* 1869. Longer Contiguous Segments of Ones than Zeros */
 
-/* You are given a 0-indexed string s that has lowercase English letters in its even indices and digits in its odd indices.
+/* Given a binary string s, return true if the longest contiguous segment of 1's is strictly longer than the longest contiguous segment of 0's in s, or return false otherwise.
 
-There is a function shift(c, x), where c is a character and x is a digit, that returns the xth character after c.
+For example, in s = "110100010" the longest continuous segment of 1s has length 2, and the longest continuous segment of 0s has length 3.
+Note that if there are no 0's, then the longest continuous segment of 0's is considered to have a length 0. The same applies if there is no 1's. */
 
-For example, shift('a', 5) = 'f' and shift('x', 0) = 'x'.
-For every odd index i, you want to replace the digit s[i] with shift(s[i-1], s[i]).
+/* Input: s = "1101"
+Output: true
+Explanation:
+The longest contiguous segment of 1s has length 2: "1101"
+The longest contiguous segment of 0s has length 1: "1101"
+The segment of 1s is longer, so return true. */
 
-Return s after replacing all digits. It is guaranteed that shift(s[i-1], s[i]) will never exceed 'z'. */
+/* Input: s = "111000"
+Output: false
+Explanation:
+The longest contiguous segment of 1s has length 3: "111000"
+The longest contiguous segment of 0s has length 3: "111000"
+The segment of 1s is not longer, so return false. */
 
-/* Input: s = "a1c1e1"
-Output: "abcdef"
-Explanation: The digits are replaced as follows:
-- s[1] -> shift('a',1) = 'b'
-- s[3] -> shift('c',1) = 'd'
-- s[5] -> shift('e',1) = 'f' */
-
-/* Input: s = "a1b2c3d4e"
-Output: "abbdcfdhe"
-Explanation: The digits are replaced as follows:
-- s[1] -> shift('a',1) = 'b'
-- s[3] -> shift('b',2) = 'd'
-- s[5] -> shift('c',3) = 'f'
-- s[7] -> shift('d',4) = 'h' */
+/* Input: s = "110100010"
+Output: false
+Explanation:
+The longest contiguous segment of 1s has length 2: "110100010"
+The longest contiguous segment of 0s has length 3: "110100010"
+The segment of 1s is not longer, so return false. */
 
 /* Answer Below */
 
 // input: a string
 // output: a string
 
-function replaceDigits(str) {
+function checkZeroOnes(str) {
     
 }
 
-replaceDigits("a1c1e1");
-replaceDigits("a1b2c3d4e");
+checkZeroOnes("1101");
+checkZeroOnes("111000");
+checkZeroOnes("110100010");
 
 
 
 
+
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
 /**/
 /**/
