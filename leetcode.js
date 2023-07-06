@@ -306,6 +306,35 @@ checkZeroOnes("1101");
 checkZeroOnes("111000");
 checkZeroOnes("110100010");
 
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+
+/* 290. Word Pattern */
+
+/* Given a pattern and a string s, find if s follows the same pattern.
+
+Here follow means a full match, such that there is a bijection between a letter in pattern and a non-empty word in s. */
+
+/* Input: pattern = "abba", s = "dog cat cat dog"
+Output: true */
+
+/* Input: pattern = "abba", s = "dog cat cat fish"
+Output: false */
+
+/* Input: pattern = "aaaa", s = "dog cat cat dog"
+Output: false */
+
+/* Answer Below */
+
+// input: two strings
+// output: a boolean
+
+function wordPattern(pattern, s) {
+    
+}
+
+wordPattern("abba", "dog cat cat dog");
+wordPattern("abba", "dog cat cat fish");
+wordPattern("aaaa", "dog cat cat dog");
 
 
 
