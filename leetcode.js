@@ -118,6 +118,58 @@ Output: 1*/
 
 /* Answer Below */
 
+//input: an array of numbers and an int which equals the number of max amount you can add 
+//output: the max frequency of an integer after adding the k amount to each 
+
+//my attempt -- not finished
+const maxFrequency = function (nums, k) {
+    const sorted = nums.sort((a, b) => a-b);
+    const length = sorted.length;
+    let remainingAmount = k
+
+    while (remainingAmount > 0){
+        for (let i=0; i < length; i++){
+            let difference = sorted[length-1] - sorted[i]
+            console.log('dif', difference)
+            if (difference > 0){
+                // console.log('everytime', remainingAmount)
+                sorted[i]++;
+                remainingAmount--;
+                console.log(sorted)
+            } else {
+                i++
+            }
+        }
+    }
+}
+
+//option 2
+
+const maxFrequency1 = function(nums, k) {
+    nums.sort((a, b) => a - b);
+    const length = nums.length;
+    let left = 0;
+    let maxFreq = 1;
+    let operations = k;
+
+    for (let right = 1; right < length; right++) {
+        operations -= (nums[right] - nums[right - 1]) * (right - left);
+
+        while (operations < 0) {
+            operations += nums[right] - nums[left];
+            left++;
+        }
+
+        maxFreq = Math.max(maxFreq, right - left + 1);
+    }
+
+    return console.log(maxFreq);
+};
+
+maxFrequency1([1,2,4], 5);
+maxFrequency1([1,4,8,13], 5);
+maxFrequency1([3,9,6], 2);
+
 
 /**/
 /**/
